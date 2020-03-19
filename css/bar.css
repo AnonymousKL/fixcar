@@ -1,0 +1,133 @@
+.bar{
+    border: 2px solid brown;
+    width: 30%;
+    margin: 25px auto 0;
+    border-radius: 3px;
+}
+
+/* cuộntrang */
+.scrollto {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 37px;
+    text-align: center;
+    background: rgba(0,0,0,.2);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    border: 5px double rgb(161, 154, 154);
+}
+.scrollto i {
+    font-size: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scrollto:hover {
+    border: 5px solid yellow;
+}   
+
+/* quytrinh */
+.wrap-intro {
+    margin-top: 30px;
+    background: gray;
+}
+.wrap-per {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+.wrap-radius {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.wrap-radius span {
+    font-weight: bolder;
+    font-family: 'Avo';
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    transition-property: color;
+    transition-delay: 0.2s;
+}
+.wrap-radius span:hover {
+    color:white;
+}
+/* .hover:hover {
+    background: black;
+} */
+.wrap-radius .radius1 {
+    display: flex;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: none;
+    border: 1px solid white;
+    transition-property: background;
+    transition-duration: 0.2s;
+}
+.wrap-radius .radius1:hover {
+    background: black;
+    opacity: 0.5;
+    border: none;
+}
+.wrap-radius .radius2 {
+    display: flex;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #fab702;
+    transition-property: background;
+    transition-duration: 0.2s;
+}
+.wrap-radius .radius2:hover {
+    background: black;
+    opacity: 0.5;
+}
+.wrap-radius .radius3 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #fab702;
+    transition-property: background;
+    transition-duration: 0.2s;
+}
+.wrap-radius .radius3:hover {
+    background: black;
+    opacity: 0.5;
+}
+.wrap-intro .bar4 {
+    border: 1px solid black;
+    width: 70%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.wrap-content {
+    color: white;
+    line-height: 50px;
+    font-family: 'Avo';
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 250px;
+}
+.wrap-content ul {
+    text-align-last: left;
+}
+.wrap-content ul li {
+    list-style: none;
+}

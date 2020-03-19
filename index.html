@@ -1,0 +1,1102 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>FixCar</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bar.css">
+    <link rel="stylesheet" href="css/glider.css">
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
+    <script>
+        window.addEventListener('load',function(){
+          document.querySelector('.glider').addEventListener('glider-slide-visible', function(event){
+              var glider = Glider(this);
+              console.log('Slide Visible %s', event.detail.slide)
+          });
+          document.querySelector('.glider').addEventListener('glider-slide-hidden', function(event){
+              console.log('Slide Hidden %s', event.detail.slide)
+          });
+          document.querySelector('.glider').addEventListener('glider-refresh', function(event){
+              console.log('Refresh')
+          });
+          document.querySelector('.glider').addEventListener('glider-loaded', function(event){
+              console.log('Loaded')
+          });
+  
+          window._ = new Glider(document.querySelector('.glider'), {
+              slidesToShow: 2, //'auto',
+              slidesToScroll: 2,
+              itemWidth: 150,
+              draggable: true,
+              scrollLock: false,
+              dots: '#dots',
+              rewind: true,
+              arrows: {
+                  prev: '.glider-prev',
+                  next: '.glider-next'
+              },
+              responsive: [
+                  {
+                      breakpoint: 800,
+                      settings: {
+                          slidesToScroll: 2,
+                          itemWidth: 400,
+                          slidesToShow: 2,
+                          exactWidth: true
+                      }
+                  },
+                  {
+                      breakpoint: 700,
+                      settings: {
+                          slidesToScroll: 4,
+                          slidesToShow: 4,
+                          dots: false,
+                          arrows: false,
+                      }
+                  },
+                  {
+                      breakpoint: 600,
+                      settings: {
+                          slidesToScroll: 3,
+                          slidesToShow: 3
+                      }
+                  },
+                  {
+                      breakpoint: 500,
+                      settings: {
+                          slidesToScroll: 2,
+                          slidesToShow: 2,
+                          dots: false,
+                          arrows: false,
+                          scrollLock: true
+                      }
+                  }
+              ]
+          });
+        });
+      </script>
+      <style type="text/css">
+        * {
+            box-sizing: border-box
+        }
+        html, body {
+            width: 100%;
+        }
+        .glider-contain {
+            width: 90%;
+            max-width: 997px;
+            margin: 0 auto;
+        }
+        .glider-slide {
+            min-height: 150px;
+        }
+        .glider-slide img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="menu_wrap d-none d-lg-block">
+                                <div class="menu_wrap_inner d-flex align-items-center justify-content-end">
+                                    <div class="main-menu">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a class="active" href="index.html">Trang Chủ</a></li>
+                                                <li><a href="service.html">Dịch Vụ</a></li>
+                                                <!-- <li><a href="#">blog <i class="ti-angle-down"></i></a> -->
+                                                    <!-- <ul class="submenu">
+                                                        <li><a href="blog.html">blog</a></li>
+                                                        <li><a href="single-blog.html">single-blog</a></li>
+                                                    </ul>
+                                                </li> -->
+                                                <!-- <li><a href="#">pages <i class="ti-angle-down"></i></a> -->
+                                                    <!-- <ul class="submenu">
+                                                        <li><a href="about.html">about</a></li>
+                                                        <li><a href="elements.html">elements</a></li>
+                                                    </ul>
+                                                </li> -->
+                                                <li><a href="#contact">Liên Hệ</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <!-- <div class="book_room">
+                                        <div class="book_btn">
+                                            <a class="popup-with-form" href="#test-form">Appointment</a>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1 overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8">
+                            <div class="slider_text">
+                                <h3>Sửa Chữa Ô TÔ 
+                                    Lưu Động
+                                    </h3>
+                                    <p>Nhanh Chóng, Uy Tín, Chất lượng<br>
+                                           Giá cả phải chăng
+                                    </p>                                <!-- <a href="#" class="boxed-btn3">Appointment</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider d-flex align-items-center justify-content-center slider_bg_2 overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8">
+                            <div class="slider_text">
+                                <h3>Sửa Chữa Ô TÔ 
+                                    Lưu Động</h3>
+                                    <p>Nhanh Chóng, Uy Tín, Chất lượng<br>
+                                        Giá cả phải chăng
+                                    </p>                                <!-- <a href="#" class="boxed-btn3">Appointment</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider d-flex align-items-center justify-content-center slider_bg_3 overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8">
+                            <div class="slider_text">
+                                <h3>Sửa Chữa Ô TÔ 
+                                    Lưu Động</h3>
+                                <p>Nhanh Chóng, Uy Tín, Chất lượng<br>
+                                    Giá cả phải chăng
+                                </p>
+                                <!-- <a href="#" class="boxed-btn3">Appointment</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+    <!-- about_area_start -->
+    <div class="bar"></div> 
+    <div class="about_area ">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="about_thumbs">
+                        <div class="large_img_1">
+                            <img src="img/about/fixing-car-concept_1426-1463.jpg" alt="">
+                        </div>
+                        <div class="small_img_1">
+                            <img src="img/about/low-angle-auto-service-change-wheels_23-2148327511.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="about_info">
+                        <div class="section_title mb-20px">
+                            <h3>Chúng Tôi</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing eliteiusmod tempor incididunt ut labore et dolore magna aliqua. Qpsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Quis ipsum suspendisse ultr.</p>
+                        </div>
+                        <p class="opening_hour">
+                            Thời Gian
+                            <span>24/7</span>
+                        </p>
+                        <a href="about.html" class="boxed-btn3">About Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area_end -->
+     <div class="bar"></div> 
+    <div class="service_area">
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-lg-6 col-md-10">
+                    <div class="section_title text-center mb-55">
+                        <h3>Dịch Vụ</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service">
+                         <div class="service_thumb">
+                             <img src="img/service/k1.jpg" alt="">
+                         </div>
+                         <div class="service_content text-center">
+                            <!-- <div class="icon">
+                                <i class="flaticon-shave"></i>
+                            </div> -->
+                            <h3>Sửa Chữa</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service">
+                         <div class="service_thumb">
+                             <img src="img/service/k2.jpg" alt="">
+                         </div>
+                         <div class="service_content text-center">
+                            <!-- <div class="icon">
+                                <i class="flaticon-barber"></i>
+                            </div> -->
+                            <h3>Bảo Dưỡng</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service">
+                         <div class="service_thumb">
+                             <img src="img/service/k3.jpg" alt="">
+                         </div>
+                         <div class="service_content text-center">
+                            <!-- <div class="icon">
+                                <i class="flaticon-null"></i>
+                            </div> -->
+                            <h3>Thay Kính</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- 
+    <div class="prising_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6">
+                    <div class="section_title mb-55">
+                        <h3>Our Pricing</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="prising_slider_active owl-carousel">
+                        <div class="prising_active d-flex justify-content-between">
+                            <div class="single_prising">
+                                <div class="prise_title">
+                                    <h4>Hair Styling</h4>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Cut</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Style</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Shaving</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_prising">
+                                <div class="prise_title">
+                                    <h4>Hair Styling</h4>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Cut</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Style</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Shaving</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prising_active d-flex justify-content-between">
+                            <div class="single_prising">
+                                <div class="prise_title">
+                                    <h4>Hair Styling</h4>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Cut</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Style</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Shaving</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_prising">
+                                <div class="prise_title">
+                                    <h4>Hair Styling</h4>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Cut</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Style</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Shaving</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prising_active d-flex justify-content-between">
+                            <div class="single_prising">
+                                <div class="prise_title">
+                                    <h4>Hair Styling</h4>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Cut</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Style</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Shaving</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_prising">
+                                <div class="prise_title">
+                                    <h4>Hair Styling</h4>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Cut</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Hair Style</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                                <div class="single_service">
+                                    <div class="service_inner">
+                                        <div class="thumb">
+                                            <img src="img/prising/1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Shaving</span>
+                                            <span>$8</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sitamet, consectetur </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- team_area_start  -->
+    <div class="bar"></div> 
+    <!-- <div class="team_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10">
+                    <div class="section_title text-center mb-55">
+                        <h3>Barber</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_team_member">
+                        <div class="team_thumb">
+                            <img src="img/team/1.png" alt="">
+                        </div>
+                        <div class="member_info text-center">
+                            <h3>Jhon Smith</h3>
+                            <p>Junior Barber</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_team_member">
+                        <div class="team_thumb">
+                            <img src="img/team/2.png" alt="">
+                        </div>
+                        <div class="member_info text-center">
+                            <h3>Jems Smith</h3>
+                            <p>Junior Barber</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_team_member">
+                        <div class="team_thumb">
+                            <img src="img/team/3.png" alt="">
+                        </div>
+                        <div class="member_info text-center">
+                            <h3>Thomas J Watson</h3>
+                            <p>Junior Barber</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --> 
+    <!-- team_area_end  -->
+
+    <!-- testimonial_area  -->
+    <!-- <div class="testimonial_area  ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title mb-40 text-center">
+                        <h3>
+                            Testimonial
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="testmonial_active owl-carousel">
+                        <div class="single_carousel">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 col-md-10">
+                                    <div class="single_testmonial text-center">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                        <div class="testmonial_author">
+                                            <div class="thumb">
+                                                <img src="img/testmonial/1.png" alt="">
+                                            </div>
+                                            <h3>Watson, web developer</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_carousel">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 col-md-10">
+                                    <div class="single_testmonial text-center">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                        <div class="testmonial_author">
+                                            <div class="thumb">
+                                                <img src="img/testmonial/1.png" alt="">
+                                            </div>
+                                            <h3>Watson, web developer</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_carousel">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7 col-md-10">
+                                    <div class="single_testmonial text-center">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                        <div class="testmonial_author">
+                                            <div class="thumb">
+                                                <img src="img/testmonial/1.png" alt="">
+                                            </div>
+                                            <h3>Watson, web developer</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- /testimonial_area  -->
+    <!-- <div class="bar"></div>  -->
+    <!-- <div class="make_apppointment_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title pl-68">
+                        <h3>Make an Appointment</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="appoint_ment_form pl-68">
+                        <form action="#">
+                            <div class="single_field">
+                                <input type="text" placeholder="Name">
+                            </div>
+                            <div class="single_field">
+                                <input type="text" placeholder="Email">
+                            </div>
+                            <div class="single_field m-0">
+                                <textarea id="" cols="30" rows="10" placeholder="Message"></textarea>
+                            </div>
+                            <p>I’m available for commissions and collaborations, and i’m <br>
+                                excited to hear from you about new projects.</p>
+                            <div class="form_btn">
+                                <button class="boxed-btn3" type="submit">Send message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-1">
+                    <div class="appointMent_info">
+                        <div class="single_appontment">
+                            <h4>Visit our studio at</h4>
+                            <p>221B Baker Street, P. O Box 3 Park Road, 
+                                USA - 215852</p>
+                        </div>
+                        <div class="single_appontment">
+                            <h4>Message us</h4>
+                            <p>Support@colorlib.net <br>
+                                (+68) 120034509</p>
+                        </div>
+                        <div class="single_appontment">
+                            <h4>Working Hours</h4>
+                            <p class="d-flex justify-content-between">
+                                <span>Monday - Friday</span>
+                                <span>:  09.00 - 23.00</span>
+                            </p>
+                            <p class="d-flex justify-content-between">
+                                <span>Sunday</span>
+                                <span>:  09.00 - 16.00s</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- glider -->
+    <div class="wrap-glider">
+        <div class="glider-contain">
+        <div class="glider">
+            <div><img alt="Test" src="./img/service/k1.jpg"></div>
+            <div><img alt="Test" src="./img/service/k2.jpg"></div>
+            <div><img alt="Test" src="./img/service/k3.jpg"></div>
+            <div><img alt="Test" src="./img/service/k1.jpg"></div>
+            <div><img alt="Test" src="./img/service/k3.jpg"></div>
+            <div><img alt="Test" src="./img/service/k2.jpg"></div>
+            
+        </div>
+        <button class="glider-prev">&laquo;</button>
+        <button class="glider-next">&raquo;</button>
+        <div id="dots"></div>
+        </div>
+    </div>
+    <!-- quytrinh -->
+    <div class="wrap-intro">
+        <div class="wrap-per">
+            <h1  style="text-align: center;color: white;" ><strong style="color:#fab702;">QUY TRÌNH</strong> LÀM VIỆC</h1>
+        </div>
+        <div class="wrap-radius">
+            <div id="r1" class="radius1" onclick="r1()"><span>GIỚI THIỆU</span></div>
+            <div id="r2" class="radius2" onclick="r2()"><span>XÁC NHẬN ĐƠN HÀNG</span></div>
+            <div id="r3" class="radius3" onclick="r3()"><span>TIẾP NHẬN THÔNG TIN</span></div>
+        </div>
+        <div class="bar4"></div>
+        <div class="wrap-content">
+            <ul id="aaa">
+                <li>Gặp chủ đầu tư để trao đổi thông tin, hiểu rõ và thống nhất được yêu cầu của chủ đầu tư.</li>
+                <li>Chủ đầu tư cung cấp giấy tờ, bản vẽ liên quan.</li>
+                <li>Tư vấn gói dịch vụ thiết kế, thi công, sản xuất phù hợp với ngân sách của chủ đầu tư.</li>
+                <li>Tiến hành khảo sát.</li>
+                <li>Sau khi biết rõ yêu cầu của chủ đầu tư và khảo sát hiện trạng, LYN Design sẽ báo giá chi phí thiết kế, thi công, sản xuất.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-md-6 col-lg-5 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                            <p class="address_text" id="contact">Địa chỉ: 51/8 Đường 24, P.Linh Đông, Thủ Đức<br>
+                            Liên hệ: 0123456789 (A.BCD)
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Thông  Tin
+                            </h3>
+                            <ul class="links">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Testimonial</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2  col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Dịch vụ
+                            </h3>
+                            <ul class="links">
+                                <li><a href="#content1">Sửa  Ô  Tô </a></li>
+                                <li><a href="#content2">Thay  Kính</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="col-xl-2  col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Follow Us
+                            </h3>
+                            <ul class="links">
+                                <li><a href="#">FaceBook</a></li>
+                                <li><a href="#">Instagram</a></li>
+                                <li><a href="#"> Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+
+    <!-- form itself end-->
+    <form id="test-form" class="white-popup-block mfp-hide">
+            <div class="popup_box ">
+                    <div class="popup_inner">
+                        <h3>Make an Appointment</h3>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-xl-6 col-md-6">
+                                    <input id="datepicker" placeholder="Date">
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                    <input id="timepicker" placeholder="time">
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                    <select class="form-select wide" id="default-select" class="">
+                                        <option data-display="Choose services">Choose services 1</option>
+                                        <option value="1">Choose services 2</option>
+                                        <option value="2">Choose services 3</option>
+                                        <option value="3">Choose services 4</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                    <select class="form-select wide" id="default-select" class="">
+                                        <option data-display="Choose Barbers">Choose Barbers</option>
+                                        <option value="1">Zaki</option>
+                                        <option value="2">Ronky</option>
+                                        <option value="3">kalu</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                    <input type="text" placeholder="Your name">
+                                </div>
+                                <div class="col-xl-6 col-md-6">
+                                    <input type="text" placeholder="Phone no">
+                                </div>
+                                <div class="col-xl-12">
+                                    <input type="email" placeholder="Your email">
+                                </div>
+                                <div class="col-xl-12">
+                                    <button type="submit" class="boxed-btn3">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </form>
+        <div class="scrollto" id="to-top" onclick="toTop()"><i class="fas fa-fighter-jet"></i></div>
+        <!-- Start Quick Buttons By share123bloggertemplates.com -->
+   <div style="margin-left:1230px !important; top:480px" class='call-now-button'>
+    <div><a style="color:white" href='https://www.facebook.com/messages/t/anhnhat2310' target="_blank"title='Liên Hệ Chúng Tôi' ></a>
+     <a href='https://www.facebook.com/messages/t/anhnhat2310' target="_blank" title='Liên Hệ Chúng Tôi' >
+     <div class='quick-alo-ph-circle'></div>
+                    <div class='quick-alo-ph-circle-fill'></div>
+                    <div class='quick-alo-ph-btn-icon quick-alo-messenger-img-circle'></div>
+     </a>
+    </div>
+   </div>
+     <style>
+    @media screen and (max-width: 1920px) {
+    .call-now-button { display: flex !important; background: #0c0c0c; }
+    .quick-call-button { display: block !important; }
+    }
+                @media screen and (min-width: px) {
+    .call-now-button .call-text { display: none !important; }
+    }
+    @media screen and (max-width: 1024px) {
+    .call-now-button .call-text { display: none !important; }
+    }
+    .call-now-button { top: 80%; }
+    .call-now-button { left: 3%; }
+    .call-now-button { background: #0c0c0c; }
+    .quick-alo-ph-btn-icon { background-color: #ffffff !important; }
+    .call-now-button .call-text { color: white ; }
+   </style>
+   <!-- /End Quick Buttons By Share123bloggertemplates.com -->
+   <div style="margin-left:1230px !important;top: 400px" class='call-now-button'>
+    <div><a style="color:white" href='https://zalo.me/0981185372' target="_blank"title='Liên Hệ Chúng Tôi' ></a>
+     <a href='https://zalo.me/0981185372' target="_blank" title='Liên Hệ Chúng Tôi' >
+     <div class='quick-alo-ph-circle'></div>
+                    <div class='quick-alo-ph-circle-fill'></div>
+                    <div class='quick-alo-ph-btn-icon quick-alo-zalo-img-circle'></div>
+     </a>
+    </div>
+   </div>
+     <style>
+    @media screen and (max-width: 1920px) {
+    .call-now-button { display: flex !important; background: #0c0c0c; }
+    .quick-call-button { display: block !important; }
+    }
+                @media screen and (min-width: px) {
+    .call-now-button .call-text { display: none !important; }
+    }
+    @media screen and (max-width: 1024px) {
+    .call-now-button .call-text { display: none !important; }
+    }
+    .call-now-button { top: 80%; }
+    .call-now-button { left: 3%; }
+    .call-now-button { background: #0c0c0c; }
+    .quick-alo-ph-btn-icon { background-color: #ffffff !important; }
+    .call-now-button .call-text { color: white ; }
+   </style>
+<link rel='stylesheet' id='lv_css-css'  href='https://cdn.jsdelivr.net/gh/hongblogger/2019@master/quick-call-button-hong.css' type='text/css' media='all' />
+<!--nut goi share123bloggertemplates.com-->
+<!-- form itself end -->
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/scrollto.js"></script>
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/glider.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        });
+        $('#datepicker2').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+             rightIcon: '<span class="fa fa-caret-down"></span>'
+         }
+
+        });
+        var timepicker = $('#timepicker').timepicker({
+         format: 'HH.MM'
+     });
+    </script>
+</body>
+
+</html>
